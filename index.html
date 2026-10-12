@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#1b3044">
+	<title>FCA Studios | The L.E.A.K. Vault</title>
+	<link rel="stylesheet" href="index.css">
+</head>
+<body>
+	<header class="site-header">
+		<div class="site-header__inner">
+			<nav class="nav-group nav-group--left" aria-label="Navegación principal">
+				<a class="nav-link nav-link--about" href="#sobre-nosotros">
+					<img src="assets/figma-header/fca-icon.png" alt="">
+					<span>Sobre nosotros</span>
+				</a>
+			</nav>
+
+			<a class="brand" href="#inicio" aria-label="FCA Studios, inicio">
+				<img class="brand__mark" src="assets/figma-header/fca-icon.png" alt="">
+				<span class="brand__wordmark">FCA<small>STUDIOS</small><span class="brand__tagline">DONDE LAS IDEAS TOMAN FORMA</span></span>
+			</a>
+
+			<nav class="nav-group nav-group--right" aria-label="Tienda">
+				<a class="nav-link nav-link--shop" href="tienda.html">
+					<span class="nav-link__stack"><img src="assets/figma-header/shop.png" alt=""><span>Tienda</span></span>
+				</a>
+				<a class="nav-link nav-link--cart" href="carrito.html">
+					<span class="nav-link__stack"><img src="assets/figma-header/cart.png" alt=""><span>Carrito</span></span>
+				</a>
+			</nav>
+		</div>
+	</header>
+
+	<main id="inicio">
+		<section class="hero" aria-label="Destacados">
+			<button class="hero__arrow hero__arrow--previous" type="button" aria-label="Diapositiva anterior" data-hero-previous></button>
+			<div class="hero__viewport" aria-roledescription="carrusel">
+				<article class="hero-slide" data-hero-slide aria-roledescription="diapositiva" aria-label="1 de 3">
+					<p class="hero-slide__eyebrow">FCA Studios presenta</p>
+					<h1>L.E.A.K</h1>
+					<p class="hero-slide__copy">Descubre las mayores conspiraciones de B.L.A.S.T. y sus misterios.</p>
+					<a class="action-link" href="conspiraciones.html">Ir</a>
+				</article>
+				<article class="hero-slide hero-slide--green" data-hero-slide aria-roledescription="diapositiva" aria-label="2 de 3" hidden>
+					<p class="hero-slide__eyebrow">FCA Studios presenta</p>
+					<h1>B.L.A.S.T.</h1>
+					<p class="hero-slide__copy">Entra en el universo y descubre lo que se esconde detrás de cada historia.</p>
+					<a class="action-link" href="blast.html">Explorar</a>
+				</article>
+				<article class="hero-slide hero-slide--red" data-hero-slide aria-roledescription="diapositiva" aria-label="3 de 3" hidden>
+					<p class="hero-slide__eyebrow">FCA Studios presenta</p>
+					<h1>THE VAULT</h1>
+					<p class="hero-slide__copy">Historias, hallazgos y objetos reunidos en un solo lugar.</p>
+					<a class="action-link" href="vault.html">Descubrir</a>
+				</article>
+				<div class="hero__dots" aria-label="Elegir diapositiva">
+					<button class="hero__dot" type="button" aria-label="Ir a diapositiva 1" aria-current="true" data-hero-dot="0"></button>
+					<button class="hero__dot" type="button" aria-label="Ir a diapositiva 2" aria-current="false" data-hero-dot="1"></button>
+					<button class="hero__dot" type="button" aria-label="Ir a diapositiva 3" aria-current="false" data-hero-dot="2"></button>
+				</div>
+			</div>
+			<button class="hero__arrow hero__arrow--next" type="button" aria-label="Diapositiva siguiente" data-hero-next></button>
+		</section>
+
+		<section class="release section" id="ultimo-lanzamiento">
+			<div class="release__inner">
+				<div class="release__copy">
+					<p class="section-kicker">Recién salido del estudio</p>
+					<h2 class="section-heading">Nuestro último lanzamiento</h2>
+					<p>Una nueva historia de FCA Studios ya está disponible. Explora el lanzamiento y encuentra todos sus detalles en el mercado.</p>
+					<a class="action-link" href="mercado.html">Ir al mercado</a>
+				</div>
+				<div class="release__art" aria-label="Portada de muestra para el último lanzamiento">
+					<img src="assets/figma-header/fca-icon.png" alt="">
+					<strong>THE L.E.A.K.</strong>
+					<span>ÚLTIMO LANZAMIENTO</span>
+				</div>
+			</div>
+		</section>
+
+		<section class="products section" id="productos">
+			<div class="products__top">
+				<div>
+					<p class="section-kicker">Piezas del universo FCA</p>
+					<h2 class="section-heading">Productos destacados</h2>
+				</div>
+				<div class="products__controls" aria-label="Controles del carrusel de productos">
+					<button class="product-arrow" type="button" aria-label="Productos anteriores" data-product-previous>‹</button>
+					<button class="product-arrow" type="button" aria-label="Productos siguientes" data-product-next>›</button>
+				</div>
+			</div>
+			<div class="products__viewport" data-products-viewport aria-label="Carrusel de productos">
+				<div class="products__track" data-products-track>
+					<article class="product-card"><div class="product-card__art"><span>Producto<br>01</span></div><h3>Producto 01</h3></article>
+					<article class="product-card"><div class="product-card__art"><span>Producto<br>02</span></div><h3>Producto 02</h3></article>
+					<article class="product-card"><div class="product-card__art"><span>Producto<br>03</span></div><h3>Producto 03</h3></article>
+					<article class="product-card"><div class="product-card__art"><span>Producto<br>04</span></div><h3>Producto 04</h3></article>
+					<article class="product-card"><div class="product-card__art"><span>Producto<br>05</span></div><h3>Producto 05</h3></article>
+					<article class="product-card"><div class="product-card__art"><span>Producto<br>06</span></div><h3>Producto 06</h3></article>
+					<article class="product-card"><div class="product-card__art"><span>Producto<br>07</span></div><h3>Producto 07</h3></article>
+					<article class="product-card"><div class="product-card__art"><span>Producto<br>08</span></div><h3>Producto 08</h3></article>
+				</div>
+			</div>
+			<div class="products__footer"><a class="action-link" href="tienda.html">Ir a la tienda</a></div>
+		</section>
+	</main>
+
+	<footer class="site-footer" id="sobre-nosotros">
+		<div class="site-footer__inner">
+			<a class="brand brand--footer" href="#inicio" aria-label="FCA Studios, volver al inicio">
+				<img class="brand__mark" src="assets/figma-header/fca-icon.png" alt="">
+				<span class="brand__wordmark">FCA<small>STUDIOS</small><span class="brand__tagline">DONDE LAS IDEAS TOMAN FORMA</span></span>
+			</a>
+			<nav class="socials" aria-label="Redes sociales">
+				<a href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram</a>
+				<a href="https://www.tiktok.com/" target="_blank" rel="noreferrer">TikTok</a>
+				<a href="https://www.youtube.com/" target="_blank" rel="noreferrer">YouTube</a>
+			</nav>
+		</div>
+		<div class="site-footer__legal">© 2026 FCA Studios</div>
+	</footer>
+	<script src="index.js" defer></script>
+</body>
+</html>
