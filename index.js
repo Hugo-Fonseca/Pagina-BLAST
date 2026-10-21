@@ -1,14 +1,13 @@
-const heroSlides = [...document.querySelectorAll("[data-hero-slide]")];
-		const heroDots = [...document.querySelectorAll("[data-hero-dot]")];
-		let activeHeroSlide = 0;
+const heroSlides = [...document.querySelectorAll("[data-hero-slide]")]; 
+		let activeHeroSlide = 0; 
 
-		function showHeroSlide(index) {
-			activeHeroSlide = (index + heroSlides.length) % heroSlides.length;
-			heroSlides.forEach((slide, slideIndex) => {
-				slide.hidden = slideIndex !== activeHeroSlide;
+		function showHeroSlide(index) { 
+			activeHeroSlide = (index + heroSlides.length) % heroSlides.length; 
+			heroSlides.forEach((slide, slideIndex) => { 
+				slide.hidden = slideIndex !== activeHeroSlide; 
 			});
-			heroDots.forEach((dot, dotIndex) => {
-				dot.setAttribute("aria-current", String(dotIndex === activeHeroSlide));
+			heroDots.forEach((dot, dotIndex) => { 
+				dot.setAttribute("aria-current", String(dotIndex === activeHeroSlide)); 
 			});
 		}
 

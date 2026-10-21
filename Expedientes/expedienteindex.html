@@ -6,6 +6,7 @@
     <meta name="theme-color" content="#1b3044" />
     <title>Expedientes | Fatality Blast</title>
     <link rel="stylesheet" href="expedienteindex.css" />
+    <script src="expedienteindex.js" defer></script>
   </head>
   <body class="dossiers-page">
     <header class="site-header">
@@ -43,56 +44,79 @@
       </header>
 
       <section class="dossier-grid" aria-label="Expedientes de personajes">
+        <!-- Ficha de Carl Hargrove -->
         <article class="dossier-card" id="carl-hargrove">
-          <div class="dossier-card__portrait" role="img" aria-label="Espacio para la ilustración de Carl Hargrove">
+          <!-- Imagen del personaje: cambiar el archivo de src para reemplazarla -->
+          <div class="dossier-card__portrait">
+            <img class="dossier-card__portrait-image" src="../assets/Expedientes/CarlEx.png" alt="Retrato de Carl Hargrove" />
+          </div>
+          <div class="dossier-card__wanted">
             <span class="wanted-stamp">Se busca vivo</span>
             <span class="wanted-crime">Crimen: Testigo clave</span>
           </div>
           <h2>Carl Hargrove</h2>
-          <p class="dossier-card__detail">Rango: Ingeniero / Científico militar</p>
+          <p class="dossier-card__detail"><strong>Rango: Ingeniero / Científico militar</strong></p>
           <p class="dossier-card__detail">
             Afiliado con la Organización de las Naciones Unidas (ONU)
           </p>
+          <!-- Botón que despliega la información adicional de Carl -->
           <details class="dossier-card__more">
             <summary class="dossier-card__button">Más información</summary>
             <p>El trasfondo completo y los archivos multimedia de Carl se publicarán aquí.</p>
           </details>
         </article>
 
+        <!-- Ficha de Sasha Lightny -->
         <article class="dossier-card" id="sasha-lightny">
-          <div class="dossier-card__portrait" role="img" aria-label="Espacio para la ilustración de Sasha Lightny">
+          <!-- Imagen del personaje: cambiar el archivo de src para reemplazarla -->
+          <div class="dossier-card__portrait">
+            <img class="dossier-card__portrait-image" src="../assets/Expedientes/SashaEx.png" alt="Retrato de Sasha Lightny" />
+          </div>
+          <div class="dossier-card__wanted">
             <span class="wanted-stamp">Se busca viva</span>
             <span class="wanted-crime">Crimen: Alta traición</span>
           </div>
           <h2>Sasha Lightny</h2>
-          <p class="dossier-card__detail">Rango: Teniente</p>
+          <p class="dossier-card__detail"><strong>Rango: Teniente</strong></p>
           <p class="dossier-card__detail">
             Afiliada con la Organización de las Naciones Unidas (ONU)
           </p>
+          <!-- Botón que despliega la información adicional de Sasha -->
           <details class="dossier-card__more">
             <summary class="dossier-card__button">Más información</summary>
             <p>El trasfondo completo y los archivos multimedia de Sasha se publicarán aquí.</p>
           </details>
         </article>
 
+        <!-- Ficha de Nikolai Vasiliev -->
         <article class="dossier-card" id="nikolai-vasiliev">
-          <div class="dossier-card__portrait" role="img" aria-label="Espacio para la ilustración de Nikolai Vasiliev">
+          <!-- Imagen del personaje: cambiar el archivo de src para reemplazarla -->
+          <div class="dossier-card__portrait">
+            <img class="dossier-card__portrait-image" src="../assets/Expedientes/NicolaiEx.png" alt="Retrato de Nikolai Vasiliev" />
+          </div>
+          <div class="dossier-card__wanted">
             <span class="wanted-stamp">Se busca vivo o muerto</span>
             <span class="wanted-crime">Crimen: Actos terroristas</span>
           </div>
           <h2>Nikolai Vasiliev</h2>
-          <p class="dossier-card__detail">Rango: General principal</p>
+          <p class="dossier-card__detail"><strong>Rango: General principal</strong></p>
           <p class="dossier-card__detail">
             Parte importante de las fuerzas armadas del Oeste Europeo
           </p>
+          <!-- Botón que despliega la información adicional de Nikolai -->
           <details class="dossier-card__more">
             <summary class="dossier-card__button">Más información</summary>
             <p>El trasfondo completo y los archivos multimedia de Nikolai se publicarán aquí.</p>
           </details>
         </article>
 
+        <!-- Ficha del grupo de soldados -->
         <article class="dossier-card" id="soldados">
-          <div class="dossier-card__portrait" role="img" aria-label="Espacio para la ilustración de los soldados">
+          <!-- Imagen del grupo: cambiar el archivo de src para reemplazarla -->
+          <div class="dossier-card__portrait">
+            <img class="dossier-card__portrait-image" src="../assets/Expedientes/SoldadoEx.png" alt="Retrato de un soldado" />
+          </div>
+          <div class="dossier-card__wanted">
             <span class="wanted-stamp">Se buscan vivos o muertos</span>
             <span class="wanted-crime">Crimen: Complejo de dictadura</span>
           </div>
@@ -100,6 +124,7 @@
           <p class="dossier-card__detail">
             Mano de obra y defensa de las fuerzas armadas del Oeste Europeo
           </p>
+          <!-- Botón que despliega la información adicional de los soldados -->
           <details class="dossier-card__more">
             <summary class="dossier-card__button">Más información</summary>
             <p>El trasfondo completo y los archivos multimedia de los soldados se publicarán aquí.</p>
@@ -108,6 +133,7 @@
       </section>
     </main>
 
+    <!-- Pie de página compartido del sitio -->
     <footer class="site-footer" id="sobre-nosotros">
       <div class="site-footer__inner">
         <a class="brand brand--footer" href="../index.html#inicio" aria-label="FCA Studios, volver al inicio">

@@ -11,6 +11,7 @@
   --sans: "Trebuchet MS", Verdana, sans-serif;
 }
 
+/* Configuración base y fondo de madera */
 * {
   box-sizing: border-box;
 }
@@ -40,6 +41,7 @@ body {
   background: var(--navy);
 }
 
+/* Encabezado, marca y navegación compartidos */
 .site-header__inner {
   width: min(100% - 36px, 1000px);
   min-height: 85px;
@@ -152,6 +154,7 @@ body {
   text-align: center;
 }
 
+/* Ancho, título y descripción de la página */
 .dossiers {
   width: min(920px, calc(100% - 36px));
   margin: 0 auto;
@@ -183,13 +186,14 @@ body {
   text-shadow: 1px 2px 2px rgb(36 16 10 / 55%);
 }
 
+/* Distribución de las fichas y apariencia de carpeta */
 .dossier-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   justify-items: center;
   gap: 28px 34px;
 }
-
+/* Apariencia de la ficha de expediente */
 .dossier-card {
   position: relative;
   isolation: isolate;
@@ -205,7 +209,7 @@ body {
   border-radius: 10px 7px 9px 9px;
   box-shadow: 9px 10px 0 rgb(31 17 12 / 86%), 13px 15px 15px rgb(27 13 9 / 40%);
 }
-
+/* Apariencia de la ficha de expediente */
 .dossier-card::before {
   content: "";
   position: absolute;
@@ -221,42 +225,32 @@ body {
   box-shadow: 4px 2px 0 rgb(31 17 12 / 42%);
 }
 
+/* Ajuste de la imagen dentro del espacio del retrato */
 .dossier-card__portrait {
-  position: relative;
   width: min(100%, 214px);
-  height: 176px;
-  margin: 0 auto 10px;
-  flex: 0 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
+  margin: 0 auto;
   overflow: hidden;
   border: 1px solid rgb(46 36 28 / 40%);
   border-radius: 10px 10px 0 0;
-  background:
-    linear-gradient(to bottom, transparent 0 43%, #28211d 43% 44.5%, transparent 44.5% 78%, #28211d 78% 79.5%, transparent 79.5%),
-    var(--paper);
+  background: var(--paper);
 }
 
-.dossier-card__portrait::before {
-  content: "Espacio para ilustración";
-  position: absolute;
-  inset: 0 0 42px;
-  display: grid;
-  place-items: center;
-  padding: 12px;
-  color: #7a7067;
-  font-family: var(--typewriter);
-  font-size: 0.76rem;
-  text-align: center;
-  text-transform: uppercase;
+.dossier-card__portrait-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.dossier-card__wanted {
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto 10px;
 }
 
 .wanted-stamp,
 .wanted-crime {
-  position: relative;
-  z-index: 1;
+  display: block;
   width: 100%;
   color: #fff;
   background: #211c19;
@@ -264,16 +258,17 @@ body {
 }
 
 .wanted-stamp {
-  padding: 3px 4px 1px;
-  font-size: 1.14rem;
+  padding: 3px 12px 1px;
+  font-size: 0.95rem;
+  font-weight: 700;
   line-height: 1;
   text-transform: uppercase;
 }
 
 .wanted-crime {
-  padding: 1px 4px 4px;
+  padding: 1px 8px 4px;
   font-family: var(--typewriter);
-  font-size: 0.59rem;
+  font-size: 0.53rem;
   line-height: 1.15;
 }
 
@@ -291,6 +286,11 @@ body {
   line-height: 1.2;
 }
 
+.dossier-card__detail strong {
+  font-weight: 700;
+}
+
+/* Área desplegable y botón Más información */
 .dossier-card__more {
   width: 100%;
   margin: auto 0 0;
@@ -343,6 +343,7 @@ body {
   text-align: left;
 }
 
+/* Pie de página compartido y enlaces a redes */
 .site-footer {
   padding: 38px 24px 24px;
   color: var(--coral);
@@ -401,6 +402,7 @@ body {
   font-size: 11px;
 }
 
+/* Ajustes para móviles */
 @media (max-width: 600px) {
   .site-header__inner {
     width: calc(100% - 24px);
@@ -494,6 +496,7 @@ body {
   }
 }
 
+/* Desactiva transiciones cuando el usuario reduce el movimiento */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
