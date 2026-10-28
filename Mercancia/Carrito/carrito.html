@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mi carrito | FCA Studios</title>
+  <link rel="stylesheet" href="carrito.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <nav class="nav-group"><a class="nav-link" href="../../Sobrenosotros/snosotros.html"><img src="../../assets/figma-header/fca-icon.png" alt=""><span>Sobre nosotros</span></a></nav>
+    <a class="brand" href="../../index.html#inicio"><img class="brand__mark" src="../../assets/figma-header/fca-icon.png" alt=""><span class="brand__wordmark">FCA<small>STUDIOS</small><span class="brand__tagline">DONDE LAS IDEAS TOMAN FORMA</span></span></a>
+    <nav class="nav-group nav-group--right"><a class="nav-link" href="../mercanciaindex.html"><span class="nav-link__stack"><img src="../../assets/figma-header/shop.png" alt=""><span>Tienda</span></span></a></nav>
+  </div>
+</header>
+<main class="cart-page">
+  <h1>Mi carrito</h1>
+  <div class="cart-layout">
+    <section class="cart-items" id="cart-items" aria-label="Productos añadidos"></section>
+    <aside class="cart-summary">
+      <p>Valor total</p>
+      <strong id="cart-total">$0 COP</strong>
+      <button id="pay-all" class="pay-button" type="button">Pagar</button>
+      <p id="cart-status" class="cart-status" role="status"></p>
+    </aside>
+  </div>
+</main>
+<footer class="site-footer"><div class="site-footer__inner"><a class="brand brand--footer" href="../../index.html#inicio"><img class="brand__mark" src="../../assets/figma-header/fca-icon.png" alt=""><span class="brand__wordmark">FCA<small>STUDIOS</small></span></a></div><div class="site-footer__legal">© 2026 FCA Studios</div></footer>
+<script src="carrito.js" defer></script>
+</body>
+</html>
