@@ -1,5 +1,6 @@
 const heroSlides = [...document.querySelectorAll("[data-hero-slide]")]; 
-		let activeHeroSlide = 0; 
+	const heroDots = [...document.querySelectorAll("[data-hero-dot]")];
+	let activeHeroSlide = 0; 
 
 		function showHeroSlide(index) { 
 			activeHeroSlide = (index + heroSlides.length) % heroSlides.length; 

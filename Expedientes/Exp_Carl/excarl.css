@@ -401,6 +401,28 @@ body {
   line-height: 1.5;
 }
 
+/* Carpeta visual completa de Carl: ambas páginas mantienen la misma proporción. */
+.carl-folder-pages {
+  width: min(1100px, 100%);
+  grid-template-columns: 1fr;
+  gap: 34px;
+}
+
+.carl-folder-page {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 16px 35px rgb(25 12 7 / 48%), 0 3px 8px rgb(25 12 7 / 65%);
+}
+
+.carl-folder-page img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 @media (max-width: 850px) {
   .case-sections {
     grid-template-columns: minmax(0, 1fr);

@@ -414,6 +414,8 @@
 			text-transform: uppercase;
 		}
 
+		.product-card a { color: inherit; text-decoration: none; }
+		.product-card__art img { width: 100%; height: 100%; object-fit: contain; }
 		.product-card h3 { margin: 12px 0 0; font-size: 17px; font-weight: 500; }
 		.products__footer { margin: 34px auto 0; text-align: center; }
 

@@ -1,0 +1,1 @@
+// Página del expediente: preparada para futuras animaciones e interacciones.`n
