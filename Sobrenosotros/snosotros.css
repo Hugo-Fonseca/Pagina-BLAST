@@ -505,3 +505,11 @@ a {
     animation-duration: 0.01ms !important;
   }
 }
+
+.nav-group--left { justify-content: flex-start; }
+.header-brand { display: inline-flex; align-items: center; text-decoration: none; }
+.header-brand img { width: 180px; height: 72px; object-fit: contain; }
+.socials a { display: inline-block; opacity: 1 !important; visibility: visible !important; color: var(--coral) !important; }
+.brand--footer .brand__mark { width: 190px; height: 70px; object-fit: contain; }
+.brand--footer .brand__wordmark { display: none; }
+.site-footer__inner { min-height: 82px; }
