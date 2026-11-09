@@ -25,11 +25,12 @@ body {
 
 .site-header { color: var(--coral); background: var(--navy); }
 .site-header__inner {
-  width: min(100% - 36px, 1000px);
+  width: 100%;
+  padding: 0 18px;
   min-height: 85px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 28px;
 }
@@ -218,10 +219,11 @@ body {
 }
 
 @media (max-width: 700px) {
-  .site-header__inner { grid-template-columns: 1fr 1fr; grid-template-areas: "brand brand" "about shop"; }
-  .header-brand { grid-area: brand; justify-self: center; }
+  .site-header__inner { grid-template-columns: 1fr 1fr; grid-template-areas: "brand brand" "about shop"; width: 100%; padding: 8px 18px; }
+  .nav-group--left, .header-brand { grid-area: brand; justify-self: center; }
+  .nav-group--left { justify-content: center; }
   .nav-link--about { grid-area: about; justify-self: start; }
-  .nav-group--right { grid-area: shop; }
+  .nav-group--right { grid-area: shop; justify-content: flex-end; }
   .hga-terminal { grid-template-columns: 1fr; gap: 20px; }
   .section-label { top: -22px; }
   .system-intro { height: auto; min-height: 390px; }

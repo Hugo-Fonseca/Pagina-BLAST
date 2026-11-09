@@ -33,13 +33,14 @@
 		}
 
 		.site-header__inner {
-			width: min(100% - 36px, 1000px);
-			min-height: 85px;
-			margin: 0 auto;
-			display: grid;
-			grid-template-columns: 1fr auto 1fr;
-			align-items: center;
-			gap: 28px;
+   		 width: 100%;
+		 padding: 0 18px;
+		 min-height: 85px;
+		 margin: 0 auto;
+		 display: grid;
+		 grid-template-columns: auto 1fr auto;
+		 align-items: center;
+		 gap: 28px;
 		}
 
 		.nav-group {
@@ -474,16 +475,17 @@
 				min-height: 0;
 				padding: 10px 0 12px;
 				grid-template-columns: 1fr 1fr;
-				grid-template-areas: "brand brand" "left right";
+				grid-template-areas: "brand brand" "about shop";
 				row-gap: 9px;
 			}
 
+			.nav-group--left { grid-area: brand; justify-self: center; }
+			.nav-link--about { grid-area: about; justify-self: start; }
+			.nav-group--right { grid-area: shop; justify-self: end; }
 			.brand { grid-area: brand; justify-self: center; }
 			.brand__mark { width: 31px; height: 51px; }
 			.brand__wordmark { font-size: 25px; }
 			.brand__wordmark small { font-size: 11px; }
-			.nav-group--left { grid-area: left; justify-content: flex-end; }
-			.nav-group--right { grid-area: right; justify-content: flex-start; }
 			.nav-group { gap: 13px; }
 			.nav-link { font-size: 12px; }
 			.nav-link--about img { width: 15px; height: 26px; }

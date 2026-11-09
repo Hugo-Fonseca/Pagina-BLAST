@@ -42,11 +42,12 @@ body {
 }
 
 .site-header__inner {
-  width: min(100% - 36px, 1000px);
+  width: 100%;
+  padding: 0 18px;
   min-height: 85px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 28px;
 }
@@ -523,7 +524,7 @@ body {
     min-height: 0;
     padding: 10px 0 12px;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "brand brand" "left right";
+    grid-template-areas: "brand brand" "about shop";
     row-gap: 9px;
   }
 
@@ -546,13 +547,18 @@ body {
   }
 
   .nav-group--left {
-    grid-area: left;
-    justify-content: flex-end;
+    grid-area: brand;
+    justify-content: center;
+  }
+
+  .nav-link--about {
+    grid-area: about;
+    justify-self: start;
   }
 
   .nav-group--right {
-    grid-area: right;
-    justify-content: flex-start;
+    grid-area: shop;
+    justify-content: flex-end;
   }
 
   .nav-group {
