@@ -64,7 +64,12 @@
 		.brand--footer .brand__wordmark { display: none; }
 		.site-footer__inner { min-height: 82px; }
 
-.site-header__inner { width: 100%; padding: 0 18px; }
-.site-header .nav-link img { width: 30px; height: 35px; }
-.site-header .nav-link--shop img { width: 38px; height: 35px; }
-.site-header .nav-link--cart img { width: 35px; height: 28px; }
+@media (max-width: 600px) {
+  .site-header__inner { width: 100%; grid-template-columns: 1fr 1fr; grid-template-areas: "brand brand" "about shop"; padding: 8px 18px; }
+  .site-header__inner > .nav-group--left, .site-header__inner > .brand { grid-area: brand; justify-self: center; }
+  .site-header__inner > .nav-link--about { grid-area: about; justify-self: start; }
+  .site-header__inner > .nav-group--right { grid-area: shop; justify-self: end; }
+  .site-footer__inner { align-items: center !important; flex-direction: column !important; text-align: center; }
+  .site-footer .brand--footer { justify-content: center; }
+  .site-footer .socials { width: 100%; justify-content: center !important; }
+}
