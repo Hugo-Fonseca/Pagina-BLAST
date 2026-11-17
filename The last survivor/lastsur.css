@@ -1,0 +1,437 @@
+:root {
+  color-scheme: dark;
+  --night: #081119;
+  --panel: #111f2a;
+  --panel-light: #172936;
+  --line: #34505e;
+  --cyan: #4ce1d2;
+  --lime: #c3f56a;
+  --white: #edf5f2;
+  --muted: #9db1ba;
+  --mono: "Courier New", monospace;
+  --sans: "Trebuchet MS", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  min-width: 320px;
+  margin: 0;
+  color: var(--white);
+  background:
+    radial-gradient(ellipse at 70% 8%, rgb(32 74 83 / 20%), transparent 34rem),
+    linear-gradient(180deg, #0b151e, var(--night) 58%, #0e1920);
+  font-family: var(--sans);
+}
+
+body::before {
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgb(90 160 170 / 4%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(90 160 170 / 4%) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+a { color: inherit; }
+
+.game-container {
+  width: min(1200px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.skip-link {
+  position: absolute;
+  z-index: 20;
+  top: 8px;
+  left: 8px;
+  padding: 10px 14px;
+  transform: translateY(-150%);
+  color: var(--night);
+  background: var(--lime);
+  font-weight: 800;
+}
+
+.skip-link:focus { transform: translateY(0); }
+
+.eyebrow__mark {
+  width: 7px;
+  height: 7px;
+  margin-right: 7px;
+  display: inline-block;
+  border-radius: 50%;
+  background: var(--lime);
+  box-shadow: 0 0 10px var(--lime);
+}
+
+.game-hero {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(54px, 8vw, 112px) 0 clamp(68px, 9vw, 126px);
+  border-bottom: 1px solid var(--line);
+}
+
+.game-hero::after {
+  position: absolute;
+  right: -120px;
+  bottom: -240px;
+  width: 600px;
+  height: 600px;
+  border: 1px solid rgb(76 225 210 / 11%);
+  border-radius: 50%;
+  box-shadow: 0 0 0 32px rgb(76 225 210 / 3%), 0 0 0 80px rgb(76 225 210 / 2%);
+  content: "";
+  pointer-events: none;
+}
+
+.game-hero__grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, .75fr);
+  align-items: center;
+  gap: clamp(40px, 8vw, 112px);
+}
+
+.eyebrow {
+  margin: 0 0 18px;
+  color: var(--cyan);
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.game-hero h1 {
+  margin: 0;
+  color: var(--white);
+  font-family: Impact, "Arial Narrow", sans-serif;
+  font-size: clamp(40px, 5vw, 70px);
+  font-weight: 500;
+  letter-spacing: .02em;
+  line-height: .96;
+}
+
+.game-hero h1 span {
+  margin-top: 8px;
+  display: block;
+  color: var(--lime);
+  font-size: .73em;
+  letter-spacing: .04em;
+}
+
+.game-hero__lead {
+  max-width: 690px;
+  margin: 28px 0 0;
+  color: #c3d0d3;
+  font-size: clamp(16px, 1.6vw, 19px);
+  line-height: 1.75;
+}
+
+.game-tags {
+  margin: 26px 0 30px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+}
+
+.game-tags li {
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.game-button {
+  min-height: 46px;
+  padding: 0 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid var(--lime);
+  color: var(--night);
+  background: var(--lime);
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: background 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.game-button:hover,
+.game-button:focus-visible {
+  transform: translateY(-2px);
+  color: var(--lime);
+  background: transparent;
+}
+
+.game-button span { font-size: 17px; }
+
+.game-hero__visual {
+  position: relative;
+  width: min(100%, 370px);
+  justify-self: center;
+  padding: 18px;
+  border: 1px solid var(--line);
+  background: linear-gradient(145deg, rgb(24 42 53 / 90%), rgb(9 17 24 / 96%));
+  box-shadow: 18px 18px 0 rgb(76 225 210 / 7%), 0 25px 55px rgb(0 0 0 / 40%);
+}
+
+.game-cover {
+  position: relative;
+  padding: 8px;
+  border: 1px solid rgb(76 225 210 / 35%);
+  background: #080d12;
+}
+
+.game-cover img {
+  width: 100%;
+  max-height: 480px;
+  display: block;
+  object-fit: contain;
+}
+
+.game-cover__corner {
+  position: absolute;
+  z-index: 1;
+  width: 16px;
+  height: 16px;
+  border-color: var(--lime);
+  border-style: solid;
+}
+
+.game-cover__corner--top { top: -1px; left: -1px; border-width: 2px 0 0 2px; }
+.game-cover__corner--bottom { right: -1px; bottom: -1px; border-width: 0 2px 2px 0; }
+
+.game-cover__readout {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: .5px;
+}
+
+.game-cover__readout b {
+  margin-right: 4px;
+  color: var(--cyan);
+}
+
+.game-hero__serial {
+  position: absolute;
+  right: -25px;
+  bottom: 76px;
+  color: var(--lime);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 2px;
+  transform: rotate(-90deg) translateX(100%);
+  transform-origin: right bottom;
+}
+
+.game-section { padding: clamp(70px, 9vw, 124px) 0; }
+
+.world-section {
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(90deg, rgb(15 29 38 / 85%), rgb(8 17 25 / 65%));
+}
+
+.world-section__grid {
+  display: grid;
+  grid-template-columns: minmax(250px, .8fr) minmax(0, 1.2fr);
+  gap: clamp(38px, 9vw, 128px);
+}
+
+.world-section h2,
+.survivor-section h2,
+.game-outro h2 {
+  margin: 0;
+  font-family: Impact, "Arial Narrow", sans-serif;
+  font-size: clamp(42px, 5.3vw, 68px);
+  font-weight: 500;
+  line-height: .98;
+}
+
+.world-section h2 span,
+.survivor-section h2 span { color: var(--cyan); }
+
+.world-section__coordinates {
+  margin-top: 30px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.world-section__story > p,
+.survivor-section__copy > p:not(.eyebrow) {
+  margin: 0 0 20px;
+  color: #c2d0d4;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.world-section__story strong { color: var(--lime); font-family: var(--mono); }
+
+.survivor-section__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, .8fr);
+  align-items: center;
+  gap: clamp(40px, 8vw, 108px);
+}
+
+.survivor-section h2 { margin-bottom: 24px; }
+.survivor-section__copy > p:not(.eyebrow) { max-width: 660px; }
+
+.survival-panel {
+  padding: 20px;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(135deg, rgb(76 225 210 / 5%), transparent 46%),
+    #101d27;
+  box-shadow: 12px 12px 0 rgb(195 245 106 / 6%);
+}
+
+.survival-panel__top,
+.survival-panel__footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.survival-panel__top { padding-bottom: 16px; border-bottom: 1px solid var(--line); }
+.survival-panel__top span:last-child { color: var(--cyan); }
+
+.survival-steps {
+  margin: 0;
+  padding: 8px 0;
+  list-style: none;
+}
+
+.survival-steps li {
+  min-height: 54px;
+  display: grid;
+  grid-template-columns: 34px 1fr 9px;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid rgb(52 80 94 / 55%);
+}
+
+.survival-steps li > span { color: var(--cyan); font-family: var(--mono); font-size: 11px; }
+.survival-steps strong { font-family: var(--mono); font-size: 13px; letter-spacing: 2px; }
+.survival-steps i { width: 7px; height: 7px; border: 1px solid var(--lime); border-radius: 50%; }
+.survival-steps li:last-child i { background: var(--lime); box-shadow: 0 0 10px var(--lime); }
+
+.survival-panel__footer { padding-top: 14px; }
+.survival-panel__footer strong { color: var(--lime); }
+
+.game-outro {
+  padding: clamp(72px, 10vw, 132px) 0;
+  overflow: hidden;
+  border-top: 1px solid var(--line);
+  background:
+    radial-gradient(ellipse at 50% 120%, rgb(76 225 210 / 16%), transparent 48%),
+    #0b151d;
+  text-align: center;
+}
+
+.game-outro__inner { display: grid; justify-items: center; }
+.game-outro__icon {
+  position: relative;
+  width: 60px;
+  height: 38px;
+  margin-bottom: 28px;
+  border: 2px solid var(--cyan);
+  border-radius: 13px 13px 18px 18px;
+  transform: rotate(-8deg);
+  box-shadow: 0 0 22px rgb(76 225 210 / 20%);
+}
+
+.game-outro__icon::before,
+.game-outro__icon::after {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 15px;
+  height: 4px;
+  content: "";
+  background: var(--lime);
+}
+
+.game-outro__icon::after { transform: rotate(90deg); }
+.game-outro__icon i,
+.game-outro__icon b { position: absolute; top: 11px; width: 6px; height: 6px; border-radius: 50%; background: var(--cyan); }
+.game-outro__icon i { right: 12px; }
+.game-outro__icon b { right: 22px; top: 17px; }
+.game-outro .eyebrow { margin-bottom: 12px; }
+.game-outro h2 { color: var(--lime); font-size: clamp(38px, 5.8vw, 72px); }
+.game-outro__inner > p:not(.eyebrow) { margin: 16px 0 0; color: #d7e0e0; font-size: 18px; }
+
+:focus-visible { outline: 2px solid var(--lime); outline-offset: 4px; }
+
+@media (max-width: 760px) {
+  .game-hero__grid,
+  .world-section__grid,
+  .survivor-section__grid { grid-template-columns: 1fr; }
+
+  .game-hero__grid { gap: 42px; }
+  .game-hero__copy { max-width: 680px; }
+  .game-hero__visual { width: min(100%, 340px); }
+  .game-cover img { max-height: 420px; }
+  .world-section__grid,
+  .survivor-section__grid { gap: 34px; }
+  .world-section__heading br,
+  .survivor-section__copy h2 br { display: none; }
+  .world-section h2,
+  .survivor-section h2 { font-size: clamp(40px, 8vw, 58px); }
+}
+
+@media (max-width: 520px) {
+  .game-container { width: min(100% - 32px, 1200px); }
+  .game-hero { padding: 46px 0 66px; }
+  .game-hero__grid { gap: 34px; }
+  .game-hero h1 { font-size: clamp(36px, 10vw, 48px); }
+  .game-hero__lead { margin-top: 20px; font-size: 15px; line-height: 1.7; }
+  .game-tags { margin: 20px 0 24px; }
+  .game-tags li { padding: 7px 8px; font-size: 8px; }
+  .game-hero__visual { width: min(100%, 300px); padding: 12px; }
+  .game-cover img { max-height: 360px; }
+  .game-hero__serial { right: -22px; bottom: 62px; font-size: 8px; }
+  .eyebrow { font-size: 9px; letter-spacing: 1.4px; }
+
+  .game-section { padding: 68px 0; }
+  .world-section__story > p,
+  .survivor-section__copy > p:not(.eyebrow) { font-size: 15px; line-height: 1.75; }
+  .survival-panel { padding: 16px; }
+
+  .game-outro { padding: 72px 0; }
+  .game-outro h2 { font-size: clamp(34px, 9vw, 48px); }
+  .game-outro__inner > p:not(.eyebrow) { font-size: 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; }
+}
