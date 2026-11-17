@@ -123,7 +123,13 @@ body { overflow-x: hidden; background: #4d1c18; font-family: Georgia, "Times New
   .alert-panel { min-height: 520px; grid-template-columns: 150px 1fr; padding: 130px 22px 20px; }
   .alert-heading { left: 20px; right: auto; top: 30px; }
   .alarm-icon { width: 68px; }
-  .subject { width: 115px; height: 115px; margin-top: 20px; }
+  .subject {
+    grid-row: 1;
+    align-self: center;
+    width: 115px;
+    height: 115px;
+    margin-top: 0;
+  }
   .alert-message { margin-top: 20px; font-size: 16px; }
   .alert-links { grid-template-columns: 1fr; margin-top: 18px; gap: 4px; }
   .alert-links a { min-height: 46px; }

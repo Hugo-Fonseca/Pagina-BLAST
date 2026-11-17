@@ -75,18 +75,6 @@ body {
   font-size: 13px;
 }
 
-.section-label .return-leak {
-  position: fixed;
-  left: 18px;
-  top: 96px;
-  z-index: 10;
-  color: var(--coral);
-  font-family: var(--sans);
-  font-size: 13px;
-  font-weight: 700;
-  text-decoration: none;
-}
-
 .system-intro {
   position: relative;
   z-index: 2;
@@ -224,10 +212,13 @@ body {
   .nav-group--left { justify-content: center; }
   .nav-link--about { grid-area: about; justify-self: start; }
   .nav-group--right { grid-area: shop; justify-content: flex-end; }
-  .hga-terminal { grid-template-columns: 1fr; gap: 20px; }
+  .hga-terminal { width: 100%; grid-template-columns: minmax(0, 1fr); gap: 20px; }
   .section-label { top: -22px; }
-  .system-intro { height: auto; min-height: 390px; }
-  .phases-scanner { height: min(500px, 105vw); width: 100%; margin-left: 0; }
+  .system-intro { height: auto; min-height: 390px; padding: 0 8px; }
+  .system-intro h1 { font-size: clamp(18px, 8vw, 36px); }
+  .phases-scanner { width: 100%; margin-left: 0; }
+  .phase-menu__title { font-size: clamp(16px, 5vw, 28px); }
+  .phase-menu a { font-size: clamp(16px, 4.4vw, 21px); }
   .site-footer__inner { align-items: flex-start; flex-direction: column; gap: 20px; }
 }
 

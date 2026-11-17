@@ -117,3 +117,42 @@ body {
 }
 .phase-action:hover, .phase-action:focus-visible { color: #fff; outline: none; }
 .phase-action[hidden] { visibility: hidden; }
+
+@media (max-width: 600px) {
+  .phase-page {
+    padding: 20px 8px 28px;
+    gap: 10px;
+  }
+
+  .phase-breadcrumb { font-size: 11px; }
+
+  .phase-screen {
+    top: 8%;
+    bottom: 14%;
+    grid-template-rows: auto auto minmax(0, 1fr) auto;
+    padding: 0 4%;
+  }
+
+  .phase-screen h1 { font-size: clamp(16px, 4.5vw, 22px); }
+  .phase-screen h2 {
+    margin: 2px 0 4px;
+    font-size: clamp(9px, 2.6vw, 12px);
+  }
+
+  .phase-screen p {
+    font-size: clamp(9px, 2.7vw, 12px);
+    line-height: 1.05;
+    white-space: normal;
+  }
+
+  .phase-actions { gap: 4px; margin-top: 3px; }
+  .phase-action {
+    flex: 1 1 0;
+    min-width: 0;
+    min-height: 24px;
+    padding: 5px 2px;
+    font-size: clamp(9px, 2.5vw, 12px);
+    line-height: 1;
+    white-space: normal;
+  }
+}
