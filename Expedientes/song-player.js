@@ -12,12 +12,14 @@ if (songPlayer) {
   });
 
   window.addEventListener("pageshow", () => {
-    const shouldRestart = sessionStorage.getItem(returnKey) === "1";
+    const savedPlayback = sessionStorage.getItem(returnKey);
+    if (savedPlayback === null) return;
+
     sessionStorage.removeItem(returnKey);
     songPlayer.pause();
     songPlayer.currentTime = 0;
 
-    if (shouldRestart) {
+    if (savedPlayback === "1") {
       songPlayer.play().catch((error) => {
         status.textContent = error.name === "NotAllowedError"
           ? "El navegador bloqueó la reproducción automática. Pulsa reproducir para escuchar."

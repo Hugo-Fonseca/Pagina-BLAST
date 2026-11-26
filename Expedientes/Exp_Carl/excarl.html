@@ -12,6 +12,7 @@
     <link rel="icon" type="image/png" href="../../assets/fca-icon.png" />
     <link rel="stylesheet" href="excarl.css" />
     <link rel="stylesheet" href="../../assets/fonts/titles.css" />
+    <link rel="stylesheet" href="../song-player.css" />
   </head>
   <body class="carl-page">
     <header class="site-header">
@@ -53,6 +54,14 @@
           />
         </figure>
       </section>
+      <section class="song-player" aria-labelledby="carl-song-title">
+        <h2 id="carl-song-title">Carl - En la Oscuridad, una Chispa</h2>
+        <audio controls preload="auto" data-song-player data-song-id="carl">
+          <source src="../../assets/Music/Carl - En la Oscuridad, una Chispa - usesuno.com.mp3" type="audio/mpeg" />
+          Tu navegador no puede reproducir este archivo de audio.
+        </audio>
+        <p class="song-player__status" role="status" aria-live="polite"></p>
+      </section>
     </main>
 
     <footer class="site-footer" id="sobre-nosotros">
@@ -71,5 +80,6 @@
       <div class="site-footer__legal">© 2026 FCA Studios</div>
     </footer>
     <script src="excarl.js" defer></script>
+    <script src="../song-player.js" defer></script>
   </body>
 </html>
