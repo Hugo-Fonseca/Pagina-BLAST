@@ -26,7 +26,7 @@ const sections = {
   definitiva: {
     title: "PRUEBA DEFINITIVA DE LEALTAD",
     text: "Como última prueba para comprobar que son fieles a la causa es\neliminar a aquellos que no sean rebeldes, ni aquellos que apoyen a los\nlíderes enemigos.",
-    warning: "SERÁN ESECUZADOS",
+    warning: "\nSERÁN EJECUTADOS",
     previous: "lealtad",
     primary: { label: "PLAN PRINCIPAL", target: "plan" }
   },
@@ -44,7 +44,7 @@ const sections = {
   },
   novedades: {
     title: "NOVEDADES",
-    text: "Un sobreviviente cualquiera como personaje está en el plan a favor.\n\nSe registran nuevos movimientos dentro del conflicto y toda información\nconfirmada será publicada desde este canal.",
+    text: "Un sobreviviente? Catalogado como\namenaza por el sistema?\n\nWow, es cierto eso que dicen A veces el arma más afilada se\nesconde bajo el disfraz de una piedra cualquiera, debemos\nencontrarlo para que sea un aliado en nuestra causa, una pieza así \n en el escuadrón podría ser la clave para la victoria.",
     previous: "plan",
     primary: { label: "VOLVER A INDEXLEAK", target: "indexleak" }
   }
