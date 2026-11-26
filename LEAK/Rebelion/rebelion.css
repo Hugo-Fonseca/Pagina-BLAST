@@ -56,15 +56,15 @@ body { overflow-x: hidden; background: #050505; font-family: Georgia, "Times New
   white-space: pre-line;
 }
 .classified-warning {
-  position: absolute;
-  left: 50%;
-  bottom: 105px;
-  transform: translateX(-50%);
+  margin-top: 18px;
   color: #df1717;
   font-family: Impact, sans-serif;
   font-size: clamp(30px, 5vw, 52px);
   letter-spacing: 2px;
   text-shadow: none;
+}
+@media (min-width: 701px) {
+  .rebelion-panel.has-warning { padding-bottom: 135px; }
 }
 .rebelion-actions {
   position: absolute;
@@ -116,5 +116,4 @@ body { overflow-x: hidden; background: #050505; font-family: Georgia, "Times New
   .rebelion-panel h1 { font-size: 38px; }
   .action-buttons { width: 100%; flex-direction: column; }
   .action-buttons a { width: 100%; min-width: 0; min-height: 48px; }
-  .classified-warning { bottom: 205px; }
 }

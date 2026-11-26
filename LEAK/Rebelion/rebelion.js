@@ -61,6 +61,7 @@ document.querySelector("#rebelion-text").textContent = section.text;
 const warning = document.querySelector("#rebelion-warning");
 warning.textContent = section.warning || "";
 warning.hidden = !section.warning;
+document.querySelector(".rebelion-panel").classList.toggle("has-warning", Boolean(section.warning));
 
 const previous = document.querySelector("#previous-section");
 previous.hidden = !section.previous;
