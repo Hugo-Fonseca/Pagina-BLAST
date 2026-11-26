@@ -26,7 +26,7 @@ const sections = {
   definitiva: {
     title: "PRUEBA DEFINITIVA DE LEALTAD",
     text: "Como última prueba para comprobar que son fieles a la causa es\neliminar a aquellos que no sean rebeldes, ni aquellos que apoyen a los\nlíderes enemigos.",
-    warning: "\nSERÁN EJECUTADOS",
+    warning: "\n\nSERÁN EJECUTADOS",
     previous: "lealtad",
     primary: { label: "PLAN PRINCIPAL", target: "plan" }
   },
