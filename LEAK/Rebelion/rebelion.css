@@ -64,7 +64,7 @@ body { overflow-x: hidden; background: #050505; font-family: Georgia, "Times New
   font-family: Impact, sans-serif;
   font-size: clamp(30px, 5vw, 52px);
   letter-spacing: 2px;
-  text-shadow: 0 0 5px #f00, 0 0 16px #f00;
+  text-shadow: none;
 }
 .rebelion-actions {
   position: absolute;
