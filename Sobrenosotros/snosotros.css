@@ -234,7 +234,7 @@ a {
 .team-portraits {
   position: relative;
   width: 100%;
-  min-height: 400px;
+  min-height: 482px;
 }
 
 .team-portrait {
@@ -254,17 +254,23 @@ a {
 .team-portrait--diana {
   top: 0;
   left: 0;
-  width: 181px;
-  height: 206px;
+  width: 300px;
+  height: 251px;
   transform: rotate(-3deg);
 }
 
 .team-portrait--hugo {
   bottom: 0;
   left: 30px;
-  width: 160px;
-  height: 181px;
+  width: 194px;
+  height: 219px;
   transform: rotate(2.5deg);
+}
+
+@media (min-width: 900px) {
+  .team-portraits { min-height: 535px; }
+  .team-portrait--diana { width: 300px; height: 280px; }
+  .team-portrait--hugo { width: 215px; height: 242px; }
 }
 
 .team-copy h2 {
@@ -369,7 +375,7 @@ a {
   }
 
   .team-card {
-    grid-template-columns: minmax(170px, 0.7fr) minmax(0, 1.3fr);
+    grid-template-columns: minmax(220px, 0.7fr) minmax(0, 1.3fr);
   }
 }
 
@@ -471,18 +477,18 @@ a {
 
   .team-portraits {
     width: min(100%, 340px);
-    min-height: 350px;
+    min-height: 420px;
   }
 
   .team-portrait--diana {
-    width: 156px;
-    height: 181px;
+    width: 300px;
+    height: 217px;
   }
 
   .team-portrait--hugo {
     left: 32px;
-    width: 140px;
-    height: 160px;
+    width: 200px;
+    height: 194px;
   }
 
   .site-footer {
