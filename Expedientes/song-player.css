@@ -1,0 +1,30 @@
+.song-player {
+  width: min(600px, 100%);
+  margin: 28px auto 0;
+  padding: 18px;
+  color: var(--ink);
+  background: var(--folder-light);
+  border: 1px solid rgb(74 42 32 / 45%);
+  border-radius: 5px;
+  box-shadow: 3px 4px 0 rgb(31 17 12 / 65%);
+}
+
+.song-player h2 {
+  margin: 0 0 12px;
+  text-align: center;
+}
+
+.song-player audio {
+  display: block;
+  width: 100%;
+}
+
+.song-player__status {
+  margin: 10px 0 0;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+}
+
+.song-player__status:empty {
+  display: none;
+}

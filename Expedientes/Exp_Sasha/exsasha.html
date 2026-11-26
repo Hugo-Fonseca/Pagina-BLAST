@@ -12,6 +12,7 @@
     <link rel="icon" type="image/png" href="../../assets/fca-icon.png" />
     <link rel="stylesheet" href="exsasha.css" />
     <link rel="stylesheet" href="../../assets/fonts/titles.css" />
+    <link rel="stylesheet" href="../song-player.css" />
   </head>
   <body class="sasha-page">
     <header class="site-header">
@@ -53,14 +54,14 @@
           />
         </figure>
       </section>
-      <a
-        class="back-link sasha-song-link"
-        href="https://suno.com/s/FX9H2rWNHNtMfqml"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Escuchar canción prototipo de Sasha Lightny
-      </a>
+      <section class="song-player" aria-labelledby="sasha-song-title">
+        <h2 id="sasha-song-title">Sasha Lightny, Soldado del Caos</h2>
+        <audio controls preload="metadata" data-song-player data-song-id="sasha">
+          <source src="../../assets/Music/Sasha Lightny, Soldado del Caos - usesuno.com.mp3" type="audio/mpeg" />
+          Tu navegador no puede reproducir este archivo de audio.
+        </audio>
+        <p class="song-player__status" role="status" aria-live="polite"></p>
+      </section>
     </main>
 
     <footer class="site-footer" id="sobre-nosotros">
@@ -79,5 +80,6 @@
       <div class="site-footer__legal">© 2026 FCA Studios</div>
     </footer>
     <script src="exsasha.js" defer></script>
+    <script src="../song-player.js" defer></script>
   </body>
 </html>

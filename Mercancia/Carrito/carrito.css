@@ -73,3 +73,45 @@
   .site-footer .brand--footer { justify-content: center; }
   .site-footer .socials { width: 100%; justify-content: center !important; }
 }
+
+@media (max-width: 700px) {
+  .cart-item {
+    grid-template-columns: 64px minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .cart-item__image {
+    width: 64px;
+    height: 80px;
+  }
+
+  .cart-item__info {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "name"
+      "price"
+      "actions";
+    gap: 8px;
+  }
+
+  .cart-item__name {
+    font-size: 15px;
+    overflow-wrap: anywhere;
+  }
+
+  .cart-item__price {
+    font-size: 14px;
+    text-align: left;
+    overflow-wrap: anywhere;
+  }
+
+  .cart-item__actions {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .cart-item__actions button {
+    padding: 8px 10px;
+  }
+}
